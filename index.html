@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chic Boutique - Home</title>
+
+    <!-- Global styles first, then page-specific styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="index.html" class="logo">Chic<span>Boutique</span></a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="cart.html" id="cart-link"
+            >Cart (<span id="cart-count">0</span>)</a
+          >
+          <span id="auth-links">
+            <a href="login.html">Login</a> &nbsp;|&nbsp;
+            <a href="signup.html">Sign Up</a>
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== HERO BANNER ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to Chic Boutique</h1>
+        <p>Stylish wears for Men, Women, and Children</p>
+      </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container">
+      <!-- category filter buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="men">Men</button>
+        <button class="filter-btn" data-category="women">Women</button>
+        <button class="filter-btn" data-category="children">Children</button>
+      </div>
+
+      <!-- products get added here by home.js -->
+      <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Chic Boutique. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts: order matters, each file depends on the ones before it -->
+    <!-- <script src="js/products-data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/home.js"></script> -->
+  </body>
+</html>
