@@ -33,7 +33,7 @@ function renderCart() {
 
 
     }
-    cartTotalElement.textContent = `₦jj ${total.toFixed(2)}`
+    cartTotalElement.textContent = `₦ ${total.toFixed(2)}`
     let removeButtons = document.querySelectorAll('.remove-btn');
     removeButtons.forEach(function(button){
         button.addEventListener('click', function(){
