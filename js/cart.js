@@ -45,14 +45,25 @@ function renderCart() {
 
 
 
+
 function removeFromCart(productId) {
     let cart = getCart();
-    let newCart = cart.filter(function(item){
-        return item.id !== productId;
+
+    let item = cart.find(function(item) {
+        return item.id === productId;
     });
-    saveCart(newCart);
+
+    if (item) {
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+        } else {
+            cart = cart.filter(function(item) {
+                return item.id !== productId;
+            });
+        }
+    }
+
+    saveCart(cart);
     renderCart();
 }
-
-
-renderCart();
+ renderCart();
